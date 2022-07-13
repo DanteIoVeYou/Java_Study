@@ -1,9 +1,9 @@
 public class Inherit {
     public static void main(String[] args) {
-        Animal animal = new Animal("a");
+        Animal animal = new Animal("animal...");
         animal.eat();
-        Bird bird = new Bird("aa");
-        bird.eat();
+        Bird bird = new Bird("bird...");
+        bird.fly();
     }
 }
 
@@ -13,13 +13,16 @@ class Animal {
         this.name = name;
     }
     public void eat() {
-        System.out.println("Animal::eat()");
+        System.out.println(this.name + "Animal::eat()");
     }
 }
 
 class Bird extends Animal {
     public Bird(String name) {
         super(name);
+    }
+    public void fly() {
+        System.out.println(this.name + "Bird::fly()");
     }
 }
 
